@@ -2,8 +2,7 @@
   <aside class="card p-5 mb-5 border border-primary offset-xl-1 col-xl-4 d-xl-inline-flex">
     <section>
       <h5 class="text-center font-weight-bold">Vädret just nu</h5>
-      <div *ngFor="let weatherCity of weatherData" class="bg-dark mt-4">
-        <div class="rounded-top">
+      <div *ngFor="let weatherCity of weatherData" class="bg-dark border border-primary ciy-weather-radius mt-4">
           <h5 class="text-center pt-3 pb-3 text-white bg-primary">{{ weatherCity.city }}</h5>
           <section class="bg-dark">
             <section class="row">
@@ -13,8 +12,7 @@
                 <img class="img-size  " src="{{ weatherCity.icon }}" alt="weather">
               </div>
             </section>
-          </section>
-        </div>
+          </section>    
       </div>
     </section>
   </aside>
