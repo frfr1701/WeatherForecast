@@ -1,15 +1,15 @@
 <div class="row flex-row-reverse">
   <aside class="card p-5 mb-5 border border-primary offset-xl-1 col-xl-4 d-xl-inline-flex">
-    <section>
+    <section id="homeaside">
       <h5 class="text-center font-weight-bold">Vädret just nu</h5>
-      <div *ngFor="let weatherCity of weatherData" class="bg-dark border border-primary ciy-weather-radius mt-4">
+      <div *ngFor="let weatherCity of weatherData" class="bg-dark border border-primary mt-4 city-weather-radius">
         <h5 class="text-center pt-3 pb-3 text-white bg-primary">{{ weatherCity.city }}</h5>
         <section class="bg-dark">
           <section class="row">
             <p class="text-white pt-3 pb-3 text-center font-weight-bold col-4"> {{ weatherCity.wind }} </p>
             <p class="text-white pt-3 pb-3 text-center font-weight-bold col-4"> {{ weatherCity.temperature }} </p>
             <div class="col-3">
-              <img class="img-size  " src="{{ weatherCity.icon }}" alt="weather">
+              <img class="img-size" src="{{ weatherCity.icon }}" alt="weather">
             </div>
           </section>
         </section>
