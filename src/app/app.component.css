@@ -1,0 +1,26 @@
+.header_background {
+    background: url("../assets/images/header-background.png");
+    background-size: cover;
+}
+
+.nav_details {
+    box-shadow: 0 0 5px; 
+}
+
+header > h1, header > p {
+    -webkit-text-stroke-color: black;
+}
+
+header > h1 {
+    -webkit-text-stroke-width: 0.05rem;
+}
+
+header > p {
+    font-weight: 500;
+    font-size: 1.2rem;
+    -webkit-text-stroke-width: 0.03rem;
+}
+
+footer {
+    box-shadow: 0 0 5px;
+}

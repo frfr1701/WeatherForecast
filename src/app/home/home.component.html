@@ -1,0 +1,56 @@
+<div class="row flex-row-reverse">
+  <aside class="card p-5 mb-5 border border-primary offset-xl-1 col-xl-4 d-xl-inline-flex">
+    <section>
+      <h5 class="text-center font-weight-bold">Vädret just nu</h5>
+      <div *ngFor="let weatherCity of weatherData" class="bg-dark mt-4">
+        <div class="border border-primary">
+          <h5 class="text-center pt-3 pb-3 text-white bg-primary">{{ weatherCity.city }}</h5>
+          <section class="bg-dark">
+            <section class="row">
+              <p class="text-white pt-3 pb-3 text-center font-weight-bold col-4"> {{ weatherCity.wind }} </p>
+              <p class="text-white pt-3 pb-3 text-center font-weight-bold col-4"> {{ weatherCity.temperature }} </p>
+              <div class="col-3">
+                <img class="img-size  " src="{{ weatherCity.icon }}" alt="weather">
+              </div>
+            </section>
+          </section>
+        </div>
+      </div>
+    </section>
+  </aside>
+
+  <article class="card p-5 mb-5 border border-primary col-xl-7 d-xl-inline-flex">
+    <header>
+      <h5 class="font-weight-bold">Dagens väderbilder</h5>
+    </header>
+    <section id="slider">
+      <figure>
+        <div>
+          <img src="../../assets/images/image1.png">
+          <img src="../../assets/images/image2.png">
+          <img src="../../assets/images/image3.png">
+          <img src="../../assets/images/image4.png">
+          <img src="../../assets/images/image1.png">
+        </div>
+        <div>
+          <figcaption>
+            <p class="text-muted">Plats: Göteborg Fotograf: *Okänd*</p>
+          </figcaption>
+          <figcaption>
+            <p class="text-muted">Plats: Stockholm Fotograf: *Okänd*</p>
+          </figcaption>
+          <figcaption>
+            <p class="text-muted">Plats: Malmö Fotograf: *Okänd*</p>
+          </figcaption>
+          <figcaption>
+            <p class="text-muted">Plats: Skellefteå Fotograf: *Okänd*</p>
+          </figcaption>
+          <figcaption>
+            <p class="text-muted">Plats: Göteborg Fotograf: *Okänd*</p>
+          </figcaption>
+        </div>
+      </figure>
+      <p>Här har vi de vinnande bidragen till dagens väderbilder</p>
+    </section>
+  </article>
+</div>

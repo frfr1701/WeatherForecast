@@ -1,0 +1,27 @@
+.card {
+    box-shadow: 0 0 5px;
+}
+
+.not_displaying{
+    display: none;
+}
+
+.displaying{
+    display: default;
+}
+
+.mb-before-search {
+    margin-bottom: 176px;
+}
+
+.mb-wrong-search {
+    margin-bottom: 144px;
+}
+
+.borderless td{
+    border-color: black;
+}
+
+.borderless th{
+    border-bottom-color: #428bca;
+}
