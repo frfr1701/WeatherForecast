@@ -2,7 +2,7 @@
     box-shadow: 0 0 5px;
 }
 
-city_weather:first-child {
+.city_weather:first-child {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
