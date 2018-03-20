@@ -2,6 +2,10 @@
     box-shadow: 0 0 5px;
 }
 
+city_weather:first-child {
+    border-top: 5px;
+}
+
 .img-size {
     height: 90%;
 }
