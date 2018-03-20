@@ -10,6 +10,11 @@
     overflow: hidden;
 }
 
+.img-radius {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
 .img-size {
     height: 90%;
 }
@@ -53,12 +58,12 @@
     margin: 0;
 }
 
-#slider figure div img, #slider figure div figcaption{
+#slider figure div img, #slider div p{
     float: left;
     width: 20%;
 }
 
-#slider figure {
+#slider figure, #slider #img-texts {
     position: relative;
     width: 500%;
     margin: 0;

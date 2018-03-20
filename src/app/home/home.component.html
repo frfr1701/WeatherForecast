@@ -3,16 +3,16 @@
     <section>
       <h5 class="text-center font-weight-bold">Vädret just nu</h5>
       <div *ngFor="let weatherCity of weatherData" class="bg-dark border border-primary ciy-weather-radius mt-4">
-          <h5 class="text-center pt-3 pb-3 text-white bg-primary">{{ weatherCity.city }}</h5>
-          <section class="bg-dark">
-            <section class="row">
-              <p class="text-white pt-3 pb-3 text-center font-weight-bold col-4"> {{ weatherCity.wind }} </p>
-              <p class="text-white pt-3 pb-3 text-center font-weight-bold col-4"> {{ weatherCity.temperature }} </p>
-              <div class="col-3">
-                <img class="img-size  " src="{{ weatherCity.icon }}" alt="weather">
-              </div>
-            </section>
-          </section>    
+        <h5 class="text-center pt-3 pb-3 text-white bg-primary">{{ weatherCity.city }}</h5>
+        <section class="bg-dark">
+          <section class="row">
+            <p class="text-white pt-3 pb-3 text-center font-weight-bold col-4"> {{ weatherCity.wind }} </p>
+            <p class="text-white pt-3 pb-3 text-center font-weight-bold col-4"> {{ weatherCity.temperature }} </p>
+            <div class="col-3">
+              <img class="img-size  " src="{{ weatherCity.icon }}" alt="weather">
+            </div>
+          </section>
+        </section>
       </div>
     </section>
   </aside>
@@ -21,7 +21,7 @@
     <header>
       <h5 class="font-weight-bold">Dagens väderbilder</h5>
     </header>
-    <section id="slider">
+    <section id="slider" class="img-radius">
       <figure>
         <div>
           <img src="https://frfr1701.github.io/WeatherForecast/assets/images/image1.png">
@@ -30,25 +30,19 @@
           <img src="https://frfr1701.github.io/WeatherForecast/assets/images/image4.png">
           <img src="https://frfr1701.github.io/WeatherForecast/assets/images/image1.png">
         </div>
-        <div>
-          <figcaption>
-            <p class="text-muted">Plats: Göteborg Fotograf: *Okänd*</p>
-          </figcaption>
-          <figcaption>
-            <p class="text-muted">Plats: Stockholm Fotograf: *Okänd*</p>
-          </figcaption>
-          <figcaption>
-            <p class="text-muted">Plats: Malmö Fotograf: *Okänd*</p>
-          </figcaption>
-          <figcaption>
-            <p class="text-muted">Plats: Skellefteå Fotograf: *Okänd*</p>
-          </figcaption>
-          <figcaption>
-            <p class="text-muted">Plats: Göteborg Fotograf: *Okänd*</p>
-          </figcaption>
-        </div>
       </figure>
-      <p>Här har vi de vinnande bidragen till dagens väderbilder</p>
     </section>
+    <section id="slider">
+      <div id="img-texts">
+        <p class="text-muted">Plats: Göteborg Fotograf: *Okänd*</p>
+        <p class="text-muted">Plats: Stockholm Fotograf: *Okänd*</p>
+        <p class="text-muted">Plats: Malmö Fotograf: *Okänd*</p>
+        <p class="text-muted">Plats: Skellefteå Fotograf: *Okänd*</p>
+        <p class="text-muted">Plats: Göteborg Fotograf: *Okänd*</p>
+      </div>
+    </section>
+    <footer>
+        <p>Här har vi de vinnande bidragen till dagens väderbilder</p>
+    </footer>
   </article>
 </div>
