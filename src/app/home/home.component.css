@@ -3,7 +3,8 @@
 }
 
 city_weather:first-child {
-    border-top: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .img-size {
