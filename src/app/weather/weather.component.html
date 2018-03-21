@@ -1,61 +1,64 @@
-<div id="searchCard" class="card p-3 p-md-5 mb-before-search border border-primary">
-  <article>
-    <div class="row">
-      <section class="col-md-6 pt-3">
-        <header>
-          <h5 class="pl-3 font-weight-bold">Sök väder på en stad</h5>
-        </header>
-        <div class="input-group">
-          <input id="searchInput" type="text" (keydown.enter)="getWeatherAtPlace()" class="form-control" placeholder="Stad...">
-          <span class="input-group-btn">
-            <button (click)="getWeatherAtPlace()" class="btn btn-primary" type="button">Sök</button>
-          </span>
-        </div>
+<div class="row">
+  <div id="searchCard" class="col-12 card p-3 p-md-5 mb-before-search border border-primary">
+    <article>
+      <div class="row">
+        <section class="col-md-6 pt-3">
+          <header>
+            <h5 class="pl-3 font-weight-bold">Sök väder på en stad</h5>
+          </header>
+          <div class="input-group">
+            <input id="searchInput" type="text" (keydown.enter)="getWeatherAtPlace()" class="form-control" placeholder="Stad...">
+            <span class="input-group-btn">
+              <button (click)="getWeatherAtPlace()" class="btn btn-primary" type="button">Sök</button>
+            </span>
+          </div>
+        </section>
+        <section class="col-md-6 pt-3">
+          <header>
+            <h5 class="pl-3 font-weight-bold">Sök väder på koordinatorer</h5>
+          </header>
+          <div class="input-group">
+            <input class="col" id="searchLongitudeInput" type="text" (keydown.enter)="getWeatherAtCoordinates()" class="form-control"
+              placeholder="Longitud...">
+            <input id="searchLatitudeInput" type="text" (keydown.enter)="getWeatherAtCoordinates()" class="form-control" placeholder="Latitud...">
+            <span class="input-group-btn">
+              <button (click)="getWeatherAtCoordinates()" class="btn btn-primary" type="button">Sök</button>
+            </span>
+          </div>
+        </section>
+      </div>
+      <section class="pt-5">
+        <h5 id="city_header" class="pl-3 font-weight-bold"></h5>
+        <table id="tableResult" class="not_displaying borderless table border border-primary ciy-weather-radius">
+          <thead class="bg-primary">
+            <tr>
+              <th class="text-center text-white">Tid</th>
+              <th class="text-center text-white">Vind</th>
+              <th class="text-center text-white">Värme</th>
+              <th class="text-center text-white">Väder</th>
+            </tr>
+          </thead>
+          <tbody class="bg-dark">
+            <tr *ngFor="let weatherCity of searchResult">
+              <td class="to-image-height">
+                <p class="text-white text-center font-weight-bold"> {{ weatherCity.clock }} </p>
+              </td>
+              <td class="to-image-height">
+                <p class="text-white text-center font-weight-bold"> {{ weatherCity.wind }} </p>
+              </td>
+              <td class="to-image-height">
+                <p class="text-white text-center font-weight-bold"> {{ weatherCity.temperature }} </p>
+              </td>
+              <td>
+                <figure class="text-center">
+                  <img class="img-bigger" src="{{ weatherCity.icon }}" alt="weather">
+                </figure>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p id="errormessage" class="text-muted"></p>
       </section>
-      <section class="col-md-6 pt-3">
-        <header>
-          <h5 class="pl-3 font-weight-bold">Sök väder på koordinatorer</h5>
-        </header>
-        <div class="input-group">
-          <input class="col" id="searchLongitudeInput" type="text" (keydown.enter)="getWeatherAtCoordinates()" class="form-control" placeholder="Longitud...">
-          <input id="searchLatitudeInput" type="text" (keydown.enter)="getWeatherAtCoordinates()" class="form-control" placeholder="Latitud...">
-          <span class="input-group-btn">
-            <button (click)="getWeatherAtCoordinates()" class="btn btn-primary" type="button">Sök</button>
-          </span>
-        </div>
-      </section>
-    </div>
-    <section class="pt-5">
-      <h5 id="city_header" class="pl-3 font-weight-bold"></h5>
-      <table id="tableResult" class="not_displaying borderless table border border-primary ciy-weather-radius">
-        <thead class="bg-primary">
-          <tr>
-            <th class="text-center text-white">Tid</th>
-            <th class="text-center text-white">Vind</th>
-            <th class="text-center text-white">Värme</th>
-            <th class="text-center text-white">Väder</th>
-          </tr>
-        </thead>
-        <tbody class="bg-dark">
-          <tr *ngFor="let weatherCity of searchResult">
-            <td class="to-image-height">
-              <p class="text-white text-center font-weight-bold"> {{ weatherCity.clock }} </p>
-            </td>
-            <td class="to-image-height">
-              <p class="text-white text-center font-weight-bold"> {{ weatherCity.wind }} </p>
-            </td>
-            <td class="to-image-height">
-              <p class="text-white text-center font-weight-bold"> {{ weatherCity.temperature }} </p>
-            </td>
-            <td>
-              <figure class="text-center">
-                <img class="img-bigger" src="{{ weatherCity.icon }}" alt="weather">
-              </figure>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-      <p id="errormessage" class="text-muted"></p>
-    </section>
-  </article>
+    </article>
+  </div>
 </div>
